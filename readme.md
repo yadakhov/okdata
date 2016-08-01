@@ -6,8 +6,8 @@ The motivation for the specifications is to have json api responses that looks l
 
 ```json
 {
-    ok : true,
-    data : { id: 1 }
+    "ok" : true,
+    "data" : { "id" : 1 }
 }
 ```
 
@@ -26,8 +26,8 @@ Required and optional keys for each type:
 
 ```json
 {
-    ok : true,
-    data : {
+    "ok" : true,
+    "data" : {
         "posts" : [
             { "id" : 1, "title" : "A blog post", "body" : "Some useful content" },
             { "id" : 2, "title" : "Another blog post", "body" : "More content" },
@@ -40,8 +40,8 @@ Required and optional keys for each type:
 
 ```json
 {
-    ok : true,
-    data : { "post" : { "id" : 2, "title" : "Another blog post", "body" : "More content" }}
+    "ok" : true,
+    "data" : { "post" : { "id" : 2, "title" : "Another blog post", "body" : "More content" }}
 }
 ```
 
@@ -49,8 +49,8 @@ Required and optional keys for each type:
 
 ```json
 {
-    ok : true,
-    data : null
+    "ok" : true,
+    "data" : null
 }
 ```
 
@@ -68,14 +68,14 @@ When an API call fails due to an error on the server. For example:
 
 ```json
 {
-    "status" : "error",
-    "message" : "Unable to communicate with database"
+    "ok" : false,
+    "error" : "Unable to communicate with database"
 }
 ```
 Required keys:
 
 - ok: Should always be set false.
-- message: A meaningful, end-user-readable (or at the least log-worthy) message, explaining what went wrong.
+- error: A meaningful, end-user-readable (or at the least log-worthy) message, explaining what went wrong.
 
 Optional keys:
 
